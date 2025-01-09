@@ -9,9 +9,9 @@ CScene::CScene()
 CScene::~CScene()
 {
 	// 오브젝트 삭제.
-	for (UINT i = 0; i < (UINT)GROUP_TYPE::END; ++i)
+	for (UINT i = 0; i < (UINT)GROUP_TYPE::END; ++i) // 벡터 배열 순회.
 	{
-		for (size_t j = 0; j < m_arrObj[i].size(); ++j)
+		for (size_t j = 0; j < m_arrObj[i].size(); ++j) // 오브젝트 배열 순회.
 		{
 			// m_arrObj[i] 그룹 벡터의 j 물체 삭제.
 			delete m_arrObj[i][j];
