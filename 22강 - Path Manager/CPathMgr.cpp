@@ -14,7 +14,8 @@ CPathMgr::~CPathMgr()
 
 void CPathMgr::init()
 {
-	GetCurrentDirectory(255, m_szContentPath); // 현재 프로젝트나 실행 파일이 실행된 경로 반환 함수.
+	// 현재 프로젝트나 실행 파일이 실행된 경로를 멤버 변수 m_szContentPath 에 저장하는 함수.
+	GetCurrentDirectory(255, m_szContentPath);
 	// 매개변수: 버퍼 길이, 배열의 주소.
 
 // SetWindowText(CCore::GetInst()->GetMainHwnd(), m_szContentPath); // 경로 출력.
