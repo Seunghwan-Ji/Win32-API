@@ -31,9 +31,12 @@ CTexture* CResMgr::LoadTexture(const wstring& _strKey, const wstring& _strRelati
 
 	pTex = new CTexture;
 	pTex->Load(strFilePath);
+
+	// 텍스쳐 클래스의 부모 클래스인 리소스 클래스에 텍스쳐 정보 저장.
 	pTex->SetKey(_strKey);
 	pTex->SetRelativePath(_strRelativePath);
 
+	// 리소스 매니저의 이진탐색트리 멤버 변수에 텍스쳐 정보 저장.
 	m_mapTex.insert(make_pair(_strKey, pTex));
 
 	return pTex;
