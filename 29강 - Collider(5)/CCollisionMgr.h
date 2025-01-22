@@ -13,8 +13,8 @@ union Test
 union COLLIDER_ID // 8 바이트 유니온.
 {
 	struct {
-		UINT Left_id;
-		UINT Right_id;
+		UINT Left_id;  // 충돌체 1 의 ID.
+		UINT Right_id; // 충돌체 2 의 ID.
 	};
 
 	ULONGLONG ID; // 8 바이트 멤버.
