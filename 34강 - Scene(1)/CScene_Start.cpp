@@ -20,7 +20,9 @@ CScene_Start::~CScene_Start()
 
 void CScene_Start::update()
 {
-	CScene::update();
+	CScene::update(); // 어차피 부모쪽 업데이트 함수를 호출할건데 굳이 자식쪽에서
+					  // 업데이트 함수를 오버라이딩해서 여기로 들어온 이유는,
+					  // 아래에서 씬 전환 작업을 하기 위함이다.
 
 	if (KEY_TAP(KEY::S))
 	{
