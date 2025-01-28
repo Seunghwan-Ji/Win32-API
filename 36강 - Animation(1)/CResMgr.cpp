@@ -47,5 +47,7 @@ CTexture* CResMgr::FindTexture(const wstring& _strKey)
 		return nullptr;
 	}
 
-	return (CTexture*)iter->second;
+	return (CTexture*)iter->second; // second 값은 부모 포인터인 CRes* 이지만,
+	                                // 실제로는 상속받은 CTexture 포인터 이므로,
+									// CTexture 포인터 타입으로 다운 캐스팅하여 반환.
 }
