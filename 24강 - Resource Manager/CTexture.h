@@ -1,7 +1,5 @@
 #pragma once
 
-#include "CRes.h"
-
 // 텍스쳐는 오브젝트에 입힐 이미지 데이터를 말함.
 
 class CTexture :
@@ -22,7 +20,7 @@ public:
 
 private:
     CTexture();
-    ~CTexture();
+    virtual ~CTexture();
 
     friend class CResMgr; // 생성자와 소멸자를 리소스 매니저 클래스에서만 호출 가능하게 설정.
 };
