@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "CTexture.h"
 #include "CCore.h"
+#include "CRes.h"
 
 CTexture::CTexture()
 	: m_dc(0)

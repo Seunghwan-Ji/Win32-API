@@ -22,5 +22,5 @@ public:
 
 public:
     CTexture();
-    ~CTexture();
+    virtual ~CTexture();
 };
