@@ -1,5 +1,7 @@
 #pragma once
 
+#include "CRes.h"
+
 // 텍스쳐는 오브젝트에 입힐 이미지 데이터를 말함.
 
 class CTexture :
