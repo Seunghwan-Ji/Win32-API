@@ -37,6 +37,8 @@ void CAnimation::update()
 		{
 			m_iCurFrm = -1;
 			m_bFinish = true;
+			m_fAccTime = 0.f;
+			return;
 		}
 
 		// 다음 프레임을 표시하기 위해 누적 시간에서 현재 프레임의 지속 시간을 차감.
