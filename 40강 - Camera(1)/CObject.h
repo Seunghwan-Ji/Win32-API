@@ -1,6 +1,6 @@
 #pragma once
 
-#include "CCamera.h" // 카메라는 모든 오브젝트가 사용하기 때문에 헤더에 헤더 파일에 작성하기로 함.
+#include "CCamera.h" // 카메라는 모든 오브젝트가 사용하기 때문에, 헤더 파일에 작성하기로 함.
 					 // cpp 파일들에서 적기 귀찮음 해결.
 
 class CCollider;
