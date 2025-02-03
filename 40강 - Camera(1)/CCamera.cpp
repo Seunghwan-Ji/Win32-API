@@ -29,6 +29,7 @@ void CCamera::update()
 	}
 
 	// 화면 중앙 좌표와 카메라 LookAt 좌표간의 차이값 계산.
+	CalDiff();
 }
 
 void CCamera::CalDiff()
