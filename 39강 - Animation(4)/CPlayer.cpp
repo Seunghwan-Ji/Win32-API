@@ -31,7 +31,7 @@ CPlayer::CPlayer()
 
 	// 텍스쳐를 오브젝트 위치보다 위쪽에 배치.
 	CAnimation* pAnim = GetAnimator()->FindAnimation(L"WALK_DOWN");
-	for (int i = 0; i < pAnim->GetMaxFrame(); ++i)
+	for (UINT i = 0; i < pAnim->GetMaxFrame(); ++i)
 	{
 		pAnim->GetFrame(i).vOffset = Vec2(0.f, -20.f);
 	}

@@ -16,8 +16,8 @@ class CAnimation
 {
 private:
 	wstring			 m_strName;
-	CAnimator* m_pAnimator;
-	CTexture* m_pTex;     // 애니메이션이 사용하는 텍스쳐.
+	CAnimator*		 m_pAnimator;
+	CTexture*		 m_pTex;     // 애니메이션이 사용하는 텍스쳐.
 	vector<tAnimFrm> m_vecFrm;   // 모든 프레임 정보.
 	int		         m_iCurFrm;  // 현재 프레임.
 	float			 m_fAccTime; // 시간 누적.
@@ -35,7 +35,7 @@ public:
 	}
 
 	tAnimFrm& GetFrame(int _iIdx) { return m_vecFrm[_iIdx]; }
-	int GetMaxFrame() { return (int)m_vecFrm.size(); }
+	UINT GetMaxFrame() { return (UINT)m_vecFrm.size(); }
 
 private:
 	void SetName(const wstring& _strName) { m_strName = _strName; }
