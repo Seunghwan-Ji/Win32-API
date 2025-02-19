@@ -112,6 +112,7 @@ CUI* CUIMgr::GetTargetedUI(CUI* _pParentUI)
 	}
 
 	// UI 바깥에서 버튼을 떼면, 누른 상태를 해제한다.
+	// 타겟 UI 에 대해선, update 함수에서 처리.
 	if (bLbtnAway)
 	{
 		for (size_t i = 0; i < vecNoneTarget.size(); ++i)
