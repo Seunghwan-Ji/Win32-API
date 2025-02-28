@@ -81,12 +81,21 @@ void CCamera::render(HDC _dc)
 		fRatio = m_fCurTime / m_fEffectDuration;
 	}
 
-	int iAlpha = (int)(255.f * fRatio);
+	int iAlpha = (int)(255.f * fRatio); // 가장 밝은 값부터 점차 어두운 값으로 변화.
 
 	BLENDFUNCTION bf = {};
+	// 기존 배경 위에 새로운 이미지를 덮어 씌우는 방식(Alpha Blending) 을 사용.
 	bf.BlendOp = AC_SRC_OVER;
+	
+	// 사용되지 않는 필드이므로 항상 0으로 설정.
 	bf.BlendFlags = 0;
+	
+	// 이미지 자체에 알파 채널(투명도 정보)이 없다고 가정.
+	// 즉, SourceConstantAlpha 값을 투명도 조절에 사용.
 	bf.AlphaFormat = 0;
+	
+	// 전체 이미지의 투명도(0~255)를 설정.
+	// 값이 클수록 불투명, 작을수록 투명.
 	bf.SourceConstantAlpha = iAlpha;
 
 	AlphaBlend(_dc

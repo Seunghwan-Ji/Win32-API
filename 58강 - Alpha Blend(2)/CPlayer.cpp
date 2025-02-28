@@ -93,9 +93,19 @@ void CPlayer::render(HDC _dc)
 	// AlphaBlend 함수의 마지막 인자에 넣는 옵션인 객체.
 	// 다음 구문들은 Microsoft Learn 문서에 나온 양식임.
 	BLENDFUNCTION bf = {};
+
+	// 기존 배경 위에 새 이미지를 알파 블렌딩 방식으로 덮어 씌운다.
 	bf.BlendOp = AC_SRC_OVER;
+
+	// 사용되지 않는 필드이므로 항상 0으로 설정.
 	bf.BlendFlags = 0;
+	
+	// 소스 이미지 자체에 포함된 알파 채널(투명도 정보)을 사용.
+	// 즉, 픽셀별로 개별적인 투명도를 적용할 수 있음.
 	bf.AlphaFormat = AC_SRC_ALPHA;
+
+	// 소스 이미지의 전체 투명도를 255(완전 불투명)로 설정.
+	// 즉, 소스 이미지의 자체 알파 채널 값만 적용됨.
 	bf.SourceConstantAlpha = 255;
 
 	AlphaBlend(_dc
